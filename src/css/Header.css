@@ -1,0 +1,30 @@
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgcolor200);
+  color: var(--primarycolor100);
+  padding: 1rem;
+}
+header .theme-btn {
+  position: absolute;
+  right: 1rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 19px;
+  border: none;
+  background-color: var(--primarycolor100);
+  transition: all 350ms ease-in-out;
+}
+header h1 {
+  font-weight: 900;
+}
+header h1:hover {
+  user-select: none;
+}
+header .theme-btn:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  filter: drop-shadow(0 0 1.2rem var(--primarycolor100));
+}

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /*Light Theme*/
+  --light-bgcolor100: hsl(229, 100%, 91%);
+  --light-boxshadowcolor: hsl(229, 10%, 10%, 0.4);
+  --light-bgcolor200: hsl(262, 27%, 94%);
+  --light-bgcolor300: hsl(239, 100%, 85%);
+  --light-sectioncolor: hsla(0, 0%, 100%, 0.3);
+  --light-primarycolor100: hsl(250, 45%, 55%);
+  --light-primarycolor200: hsl(250, 40%, 45%);
+  --light-primarycolor300: hsl(250, 40%, 40%);
+  --light-textcolor100: hsl(241, 65%, 67%);
+  --light-textcolor200: hsl(241, 65%, 60%);
+  /*Dark Theme*/
+  --dark-bgcolor100: hsl(251, 27%, 32%);
+  --dark-boxshadowcolor: hsl(251, 15%, 12%, 0.8);
+  --dark-bgcolor200: hsl(243, 34%, 25%);
+  --dark-bgcolor300: hsl(254, 41%, 12%);
+  --dark-sectioncolor: hsla(0, 0%, 100%, 0.1);
+  --dark-primarycolor100: hsl(250, 70%, 85%);
+  --dark-primarycolor200: hsl(250, 20%, 65%);
+  --dark-primarycolor300: hsl(250, 20%, 60%);
+  --dark-textcolor100: hsl(241, 71%, 87%);
+  --dark-textcolor200: hsl(241, 71%, 80%);
+  /*Default Theme*/
+  --bgcolor100: var(--dark-bgcolor100);
+  --boxshadowcolor: var(--dark-boxshadowcolor);
+  --bgcolor200: var(--dark-bgcolor200);
+  --bgcolor300: var(--dark-bgcolor300);
+  --sectioncolor: var(--dark-sectioncolor);
+  --primarycolor100: var(--dark-primarycolor100);
+  --primarycolor200: var(--dark-primarycolor200);
+  --primarycolor300: var(--dark-primarycolor300);
+  --textcolor100: var(--dark-textcolor100);
+  --textcolor200: var(--dark-textcolor200);
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 500ms ease-in-out;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+pre {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--bgcolor300);
+  font-family: "Open Sans", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*Scrollbar CSS*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bgcolor300);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bgcolor200);
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bgcolor100);
+}
+
+/*Main Body*/
+main {
+  margin: 1rem 1rem 2rem 1rem;
+}
+
+/*MEDIA QUERIES*/
+@media (width<650px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+  main {
+    margin: 0rem 0rem 0rem 0rem;
+  }
+  header {
+    justify-content: flex-start;
+  }
+  .section {
+    border-radius: 0;
+  }
+}
