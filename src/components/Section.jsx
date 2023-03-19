@@ -1,6 +1,6 @@
 import Card from "./Card";
-import "./Section.css";
-const Section = ({ title, content, SyntaxHighlighter }) => {
+import "../css/Section.css";
+const Section = ({ title, content, SyntaxHighlighter, codestyle }) => {
   return (
     <div className="section">
       <h2>{title}</h2>
@@ -14,6 +14,7 @@ const Section = ({ title, content, SyntaxHighlighter }) => {
               codeblock={obj.codeblock}
               imppoints={obj.imppoints}
               SyntaxHighlighter={SyntaxHighlighter}
+              codestyle={codestyle}
             />
           );
         })}

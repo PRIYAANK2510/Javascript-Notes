@@ -1,8 +1,8 @@
-import "./Card.css";
+import "../css/Card.css";
 import ImpPoints from "./ImpPoints";
 import Code from "./Code";
 
-const Card = ({ subtitle, description, codeblock, imppoints, SyntaxHighlighter }) => {
+const Card = ({ subtitle, description, codeblock, imppoints, SyntaxHighlighter, codestyle }) => {
   return (
     <div className="card">
       <h3 className="subtitle">{subtitle}</h3>
@@ -16,6 +16,7 @@ const Card = ({ subtitle, description, codeblock, imppoints, SyntaxHighlighter }
             codeblock={codeblock}
             subtitle={subtitle}
             SyntaxHighlighter={SyntaxHighlighter}
+            codestyle={codestyle}
           />
         );
       })}
