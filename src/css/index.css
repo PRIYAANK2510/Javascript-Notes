@@ -152,4 +152,7 @@ main {
   .section {
     border-radius: 0;
   }
+  .code:hover button {
+    opacity: 0;
+  }
 }
