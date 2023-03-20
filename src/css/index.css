@@ -3,7 +3,7 @@
 :root {
   /*Light Theme*/
   --light-bgcolor100: hsl(229, 100%, 91%);
-  --light-boxshadowcolor: hsl(229, 10%, 10%, 0.4);
+  --light-boxshadowcolor: hsl(229, 10%, 10%, 0.5);
   --light-bgcolor200: hsl(262, 27%, 94%);
   --light-bgcolor300: hsl(239, 100%, 85%);
   --light-sectioncolor: hsla(0, 0%, 100%, 0.3);
