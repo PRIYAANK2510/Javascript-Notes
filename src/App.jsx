@@ -8,14 +8,15 @@ import Sidebar from "./Sidebar";
 import { handleOpenCloseNav } from "./service/handleOpenCloseSidebar";
 import { sectionsdata } from "./data/data";
 import { openSection } from "./service/openSection";
+import { searchService } from "./service/searchService";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
   const [codestyle, setCodestyle] = useState(shadesOfPurple);
   const [sections, setSections] = useState(sectionsdata);
-  const r = document.querySelector(":root");
-  let rs = getComputedStyle(r);
   const themeclass = () => {
+    const r = document.querySelector(":root");
+    let rs = getComputedStyle(r);
     if (theme === "dark") {
       setTheme("light");
       setCodestyle(atelierCaveLight);
@@ -52,6 +53,14 @@ const App = () => {
     }
     handleOpenCloseNav();
   };
+  const handlekey = (e) => {
+    if (e.target.value.length) {
+      setSections(searchService(sectionsdata, String(e.target.value)));
+    }
+    // if (e.target.value.length == 0) {
+    //   setSections(sectionsdata);
+    // }
+  };
 
   return (
     <>
@@ -67,6 +76,7 @@ const App = () => {
         sectionsdata={sectionsdata}
         sections={sections}
         setSections={setSections}
+        handlekey={handlekey}
       />
     </>
   );
