@@ -3,7 +3,7 @@ export const Strings = {
   content: [
     {
       subtitle: "jskdhk",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, id?",
+      description: "Lora ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, id?",
       codeblock: [
         { comment: "Comment", code: "console.log('Hello World')" },
         { comment: "Comment", code: "console.log('pro')" },
@@ -12,7 +12,7 @@ export const Strings = {
       imppoints: ["hello", "buddy"],
     },
     {
-      subtitle: "dhnh",
+      subtitle: "loran",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, id?",
       codeblock: [
         { comment: "Comment", code: "console.log('Hello World')" },
