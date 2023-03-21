@@ -1,0 +1,68 @@
+.sidebar {
+  backdrop-filter: blur(4rem);
+  position: fixed;
+  width: 350px;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  transition: left 500ms ease-in-out;
+}
+#open {
+  left: 0px;
+}
+#close {
+  left: -350px;
+}
+.closeicon {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  transform: scale(2);
+  color: var(--primarycolor100);
+  transition: transform 300ms ease-in-out;
+}
+.closeicon:hover {
+  cursor: pointer;
+  transform: scale(2.3);
+}
+nav {
+  background-color: transparent;
+  color: var(--primarycolor200);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 4rem 2rem;
+}
+nav button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--primarycolor200);
+  transition: transform 300ms ease-in-out;
+}
+nav button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/*Scrollbar*/
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--bgcolor100);
+  border-radius: 10px;
+}
+/* Handle on hover */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--bgcolor200);
+}

@@ -4,10 +4,15 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { useState } from "react";
 import { shadesOfPurple } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { atelierCaveLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Sidebar from "./Sidebar";
+import { handleOpenCloseNav } from "./service/handleOpenCloseSidebar";
+import { sectionsdata } from "./data/data";
+import { openSection } from "./service/openSection";
 
 const App = () => {
   const [theme, setTheme] = useState("dark");
   const [codestyle, setCodestyle] = useState(shadesOfPurple);
+  const [sections, setSections] = useState(sectionsdata);
   const r = document.querySelector(":root");
   let rs = getComputedStyle(r);
   const themeclass = () => {
@@ -39,11 +44,30 @@ const App = () => {
       r.style.setProperty("--textcolor200", rs.getPropertyValue("--dark-textcolor200"));
     }
   };
+  const handleOpenSections = (title) => {
+    if (title.toLowerCase() === "home") {
+      setSections(sectionsdata);
+    } else {
+      setSections(openSection(sectionsdata, title));
+    }
+    handleOpenCloseNav();
+  };
 
   return (
     <>
-      <Header id={theme} themeclass={themeclass} />
-      <Body SyntaxHighlighter={SyntaxHighlighter} codestyle={codestyle} />
+      <Header id={theme} themeclass={themeclass} handleOpenCloseNav={handleOpenCloseNav} />
+      <Sidebar
+        handleOpenCloseNav={handleOpenCloseNav}
+        sectionsdata={sectionsdata}
+        handleOpenSections={handleOpenSections}
+      />
+      <Body
+        SyntaxHighlighter={SyntaxHighlighter}
+        codestyle={codestyle}
+        sectionsdata={sectionsdata}
+        sections={sections}
+        setSections={setSections}
+      />
     </>
   );
 };

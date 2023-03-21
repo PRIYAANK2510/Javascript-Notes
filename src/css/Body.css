@@ -9,6 +9,7 @@ main .search {
   position: sticky;
   top: 5.5rem;
   z-index: 1;
+  transition: width 500ms ease-in-out;
 }
 .search__input {
   width: 50vw;
@@ -19,6 +20,7 @@ main .search {
   color: var(--primarycolor100);
   font-size: 1rem;
   box-shadow: 5px 10px 1.5rem var(--boxshadowcolor);
+  transition: width 500ms ease-in-out;
 }
 .search__input:focus {
   filter: drop-shadow(0px 0px 0.5rem var(--bgcolor100));

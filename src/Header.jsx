@@ -1,7 +1,11 @@
 import "./css/Header.css";
-const Header = ({ id, themeclass }) => {
+import { FaBars } from "react-icons/fa";
+const Header = ({ id, themeclass, handleOpenCloseNav }) => {
   return (
     <header>
+      <div className="burgericon">
+        <FaBars onClick={handleOpenCloseNav} />
+      </div>
       <h1>Javascript Notes</h1>
       <button
         id={id}

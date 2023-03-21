@@ -40,7 +40,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: all 500ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 /* Remove default margin */
@@ -116,20 +116,20 @@ select {
 
 /*Scrollbar CSS*/
 /* width */
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 8px;
 }
 /* Track */
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: var(--bgcolor300);
 }
 /* Handle */
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: var(--bgcolor200);
   border-radius: 10px;
 }
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
   background: var(--bgcolor100);
 }
 
@@ -143,6 +143,9 @@ select {
   }
   header {
     justify-content: flex-start;
+  }
+  header h1 {
+    margin-left: 3rem;
   }
   .section {
     border-radius: 0;
