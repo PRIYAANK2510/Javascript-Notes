@@ -57,14 +57,22 @@ const App = () => {
     if (e.target.value.length) {
       setSections(searchService(sectionsdata, String(e.target.value)));
     }
-    // if (e.target.value.length == 0) {
-    //   setSections(sectionsdata);
-    // }
+    if (e.target.value.length == 0) {
+      setSections(sectionsdata);
+    }
+  };
+  const reloadPage = () => {
+    setSections(sectionsdata);
   };
 
   return (
     <>
-      <Header id={theme} themeclass={themeclass} handleOpenCloseNav={handleOpenCloseNav} />
+      <Header
+        id={theme}
+        themeclass={themeclass}
+        handleOpenCloseNav={handleOpenCloseNav}
+        reloadPage={reloadPage}
+      />
       <Sidebar
         handleOpenCloseNav={handleOpenCloseNav}
         sectionsdata={sectionsdata}
