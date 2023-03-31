@@ -16,7 +16,7 @@ const Body = ({ SyntaxHighlighter, codestyle, sections, handlekey }) => {
           className="search__input"
           placeholder="Search..."
           spellCheck="false"
-          onChange={(e) => handlekey(e)}
+          onInput={(e) => handlekey(e)}
         />
         <div className="search__icon">
           <FaSearch />

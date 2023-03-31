@@ -73,7 +73,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.7;
   background-color: var(--bgcolor300);
   font-family: "Open Sans", sans-serif;
 }
@@ -149,6 +149,9 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .section {
     border-radius: 0;
+  }
+  .card_section {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .code:hover button {
     opacity: 0;

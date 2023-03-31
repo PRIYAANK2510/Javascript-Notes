@@ -1,7 +1,7 @@
 .sidebar {
   backdrop-filter: blur(4rem);
   position: fixed;
-  width: 350px;
+  width: 300px;
   overflow-y: scroll;
   top: 0;
   bottom: 0;
@@ -12,7 +12,7 @@
   left: 0px;
 }
 #close {
-  left: -350px;
+  left: -300px;
 }
 .closeicon {
   position: absolute;

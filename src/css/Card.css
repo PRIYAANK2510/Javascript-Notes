@@ -17,6 +17,7 @@
   margin: 0.5rem 0.8rem;
   color: var(--textcolor200);
   font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .card .code {
@@ -49,9 +50,27 @@
 }
 .card .implist {
   color: var(--textcolor100);
-  text-transform: capitalize;
   font-size: 1rem;
+  margin-right: 0.8rem;
+  list-style-position: outside;
 }
 .code:hover button {
   opacity: 1;
+}
+
+.code pre::-webkit-scrollbar {
+  height: 5px;
+}
+/* Track */
+.code pre::-webkit-scrollbar-track {
+  background: var(--bgcolor300);
+}
+/* Handle */
+.code pre::-webkit-scrollbar-thumb {
+  background: var(--bgcolor100);
+  border-radius: 10px;
+}
+/* Handle on hover */
+.code pre::-webkit-scrollbar-thumb:hover {
+  background: var(--bgcolor200);
 }

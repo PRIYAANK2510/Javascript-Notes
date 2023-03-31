@@ -1,6 +1,6 @@
 import "../css/Card.css";
-import ImpPoints from "./ImpPoints";
 import Code from "./Code";
+import ImpPoints from "./ImpPoints";
 
 const Card = ({ subtitle, description, codeblock, imppoints, SyntaxHighlighter, codestyle }) => {
   return (

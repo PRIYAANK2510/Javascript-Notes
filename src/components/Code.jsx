@@ -10,7 +10,7 @@ const Code = ({ obj, index, codeblock, subtitle, SyntaxHighlighter, codestyle })
         <RxCopy key={`${subtitle}_icon_${index}`} />
       </button>
       <SyntaxHighlighter key={`${subtitle}_code_${index}`} language="javascript" style={codestyle}>
-        {`//${obj.comment}\n${obj.code}`}
+        {`/*${obj.comment}*/\n${obj.code}`}
       </SyntaxHighlighter>
     </div>
   );
