@@ -44,7 +44,7 @@ Users should be able to:
 ### Useful resources
 
 - [CSS](https://www.w3schools.com/css/) - I use this whenever I find any doubt in my CSS and found some problem in my code.
-- [React](https://beta.es.reactjs.org/) It cleared most doubts of React and about how state work
+- [React](https://beta.es.reactjs.org/) - It cleared most doubts of React and about how state work
 
 
 ## Author
