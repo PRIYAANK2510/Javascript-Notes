@@ -146,6 +146,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
   header h1 {
     margin-left: 2.5rem;
+    font-size: 1.6rem;
   }
   .section {
     border-radius: 0;
